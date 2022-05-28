@@ -2,7 +2,6 @@
 
 const politicians = [
   {
-    id: 1,
     name: "Donald Trump",
     age: "65",
     email: "donaldtrump@gmail.com",
@@ -18,7 +17,6 @@ const politicians = [
     linkedin: "https://www.linkedin.com/in/donald-trump-b77a4a1a3/",
   },
   {
-    id: 1,
     name: "biggs davis",
     age: "65",
     email: "biggs@gmail.com",
