@@ -4,10 +4,12 @@ require("dotenv").config();
 const ImportData = require("./DataImport.js");
 const { connectDatabase } = require("./config/MongoDb.js");
 const PoliticianRouter = require("./Routes/PoliticianRoute.js");
-
+const { notFound, errorHandler } = require("./Middlewares/Error");
 
 connectDatabase();
 const app = express();
+app.use(notFound);
+app.use(errorHandler);
 app.use(express.json());
 app.use("/api/import", ImportData);
 app.use("/api/politicians", PoliticianRouter);
